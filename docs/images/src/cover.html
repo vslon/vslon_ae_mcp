@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.wrap{position:absolute;inset:0;padding:90px 100px;display:flex;flex-direction:column}
+.tag{display:inline-flex;gap:10px;align-items:center;font-size:20px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ok);box-shadow:0 0 14px var(--ok)}
+h1{font-size:118px;font-weight:700;letter-spacing:-.04em;line-height:1;margin-top:34px}
+h1 span{color:var(--acc)}
+.sub{font-size:44px;font-weight:500;margin-top:22px;color:#d8d8e6;letter-spacing:-.01em}
+.sub b{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;color:transparent}
+.term{position:absolute;right:100px;top:300px;width:690px;background:rgba(20,20,31,.92);border:1px solid var(--line);border-radius:18px;padding:26px 30px;font-size:21px;line-height:1.7;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.term .bar{display:flex;gap:8px;margin-bottom:16px}.term .bar i{width:12px;height:12px;border-radius:50%;background:#2e2e44}
+.p{color:var(--fg)}.p:before{content:'› ';color:var(--acc2)}
+.c{color:var(--mut)} .c em{font-style:normal;color:var(--acc)} .ok{color:var(--ok)}
+.foot{margin-top:auto;display:flex;gap:18px;align-items:center;font-size:22px;color:var(--mut)}
+.chip{border:1px solid var(--line);border-radius:999px;padding:9px 18px;background:rgba(20,20,31,.7)}
+.gh{color:var(--fg);font-weight:500}
+.left{max-width:640px}
+</style></head><body>
+<div class="glow" style="width:700px;height:700px;background:#5b46ff;left:-200px;top:-260px"></div>
+<div class="glow" style="width:600px;height:600px;background:#ff2f6d;right:-220px;bottom:-300px;opacity:.35"></div>
+<div class="grid"></div>
+<div class="wrap">
+ <div class="tag"><span class="dot"></span>open source · MCP</div>
+ <div class="left">
+ <h1 class="mono">vslon<span>_</span>ae<span>_</span>mcp</h1>
+ <div class="sub">Claude <b>drives After&nbsp;Effects</b> — comps, layers, renders</div>
+ </div>
+ <div class="foot">
+  <span class="chip gh mono">github.com/vs1on/vslon_ae_mcp</span>
+  <span class="chip">zero dependencies</span><span class="chip">MIT</span>
+ </div>
+</div>
+<div class="term mono">
+ <div class="bar"><i></i><i></i><i></i></div>
+ <div class="p">duplicate the main comp for every sky variant, clean up the project and render an sRGB mp4</div>
+ <div class="c" style="margin-top:12px">→ <em>ae_project_info</em></div>
+ <div class="c">→ <em>ae_run_jsx</em>&nbsp; duplicate · swap footage</div>
+ <div class="c">→ <em>ae_run_jsx</em>&nbsp; remove unused</div>
+ <div class="c">→ <em>ae_render_queue_add</em>&nbsp; H264_sRGB</div>
+ <div class="c">→ <em>ae_render</em>&nbsp; <span class="ok">✓ done</span></div>
+</div>
+</body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.wrap{position:absolute;inset:0;padding:80px 90px;display:flex;flex-direction:column}
+h2{font-size:56px;font-weight:700;letter-spacing:-.03em}
+h2 span{color:var(--mut);font-weight:500}
+.row{display:flex;align-items:stretch;margin-top:80px}
+.box{flex:1;background:rgba(20,20,31,.92);border:1px solid var(--line);border-radius:20px;padding:30px 28px;position:relative}
+.box.hl{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc),0 0 60px rgba(155,140,255,.25)}
+.n{font-size:18px;color:var(--mut)}
+.t{font-size:32px;font-weight:600;margin-top:14px;letter-spacing:-.01em}
+.d{font-size:20px;color:var(--mut);margin-top:12px;line-height:1.45}
+.arr{width:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--mut);font-size:16px}
+.arr .ln{width:100%;height:2px;background:linear-gradient(90deg,var(--acc),var(--acc2));position:relative;margin:10px 0}
+.arr .ln:after{content:'';position:absolute;right:-2px;top:-6px;border-left:12px solid var(--acc2);border-top:7px solid transparent;border-bottom:7px solid transparent}
+.tools{margin-top:auto}
+.tl{font-size:18px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px}
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{border:1px solid var(--line);border-radius:10px;padding:10px 16px;font-size:20px;background:rgba(20,20,31,.8)}
+.chip.k{border-color:var(--acc);color:var(--acc)}
+</style></head><body>
+<div class="glow" style="width:700px;height:500px;background:#5b46ff;left:30%;top:-300px;opacity:.4"></div>
+<div class="grid"></div>
+<div class="wrap">
+ <h2>How it works <span>· four links, all local</span></h2>
+ <div class="row">
+  <div class="box"><div class="n mono">01</div><div class="t">Claude</div><div class="d">any MCP client: Claude Desktop, Claude Code, Cursor</div></div>
+  <div class="arr"><span class="mono">stdio</span><div class="ln"></div></div>
+  <div class="box"><div class="n mono">02</div><div class="t mono" style="font-size:27px">ae_mcp_server.py</div><div class="d">pure Python, zero dependencies, 10 tools</div></div>
+  <div class="arr"><span class="mono">HTTP</span><div class="ln"></div><span class="mono">:8765</span></div>
+  <div class="box hl"><div class="n mono">03</div><div class="t">AE MCP Bridge</div><div class="d">CEP extension, starts with AE, listens on 127.0.0.1 only</div></div>
+  <div class="arr"><span class="mono">evalScript</span><div class="ln"></div></div>
+  <div class="box"><div class="n mono">04</div><div class="t">After Effects</div><div class="d">ExtendScript in the open project, dialogs suppressed, errors with line numbers</div></div>
+ </div>
+ <div class="tools">
+  <div class="tl">Tools</div>
+  <div class="chips mono">
+   <span class="chip k">ae_run_jsx</span><span class="chip">ae_run_jsx_file</span><span class="chip">ae_project_info</span><span class="chip">ae_comp_layers</span><span class="chip">ae_save_frame_png</span>
+   <span class="chip">ae_render_queue_add</span><span class="chip">ae_render</span><span class="chip">ae_save_project</span><span class="chip">ae_open_project</span><span class="chip">ae_ping</span>
+  </div>
+ </div>
+</div>
+</body></html>

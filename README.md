@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/images/cover.png" alt="vslon_ae_mcp: Claude drives After Effects" width="100%">
+
 # vslon_ae_mcp
 
 **Control Adobe After Effects from Claude and other MCP clients.**
@@ -32,12 +34,7 @@ A small CEP bridge inside After Effects plus a zero-dependency MCP server: your 
 
 ## How it works
 
-```mermaid
-flowchart LR
-    A["MCP client<br/>(Claude Desktop, Claude Code, …)"] -- "stdio" --> B["ae_mcp_server.py"]
-    B -- "HTTP 127.0.0.1:8765" --> C["AE MCP Bridge<br/>(CEP extension)"]
-    C -- "evalScript" --> D["After Effects"]
-```
+<img src="docs/images/how-it-works.png" alt="Claude → ae_mcp_server.py (stdio) → AE MCP Bridge (HTTP 127.0.0.1:8765) → After Effects (evalScript)" width="100%">
 
 The MCP server wraps each request in a guarded ExtendScript function and posts it to the bridge. The bridge queues requests, because AE is single-threaded, evaluates them and returns JSON. See [docs/architecture.md](docs/architecture.md) for details.
 

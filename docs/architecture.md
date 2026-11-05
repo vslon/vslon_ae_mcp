@@ -1,5 +1,7 @@
 # Architecture
 
+![How it works](images/how-it-works.png)
+
 ```mermaid
 flowchart LR
     A["MCP client<br/>(Claude Desktop, Claude Code, …)"] -- "JSON-RPC over stdio" --> B["server/ae_mcp_server.py<br/>Python, stdlib only"]
