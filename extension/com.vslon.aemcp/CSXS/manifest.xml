@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0" ExtensionBundleId="com.vslon.aemcp" ExtensionBundleVersion="1.0.0" ExtensionBundleName="AE MCP Bridge"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ExtensionList>
+    <Extension Id="com.vslon.aemcp.server" Version="1.0.0" />
+    <Extension Id="com.vslon.aemcp.panel" Version="1.0.0" />
+  </ExtensionList>
+  <ExecutionEnvironment>
+    <HostList><Host Name="AEFT" Version="[17.0,99.9]" /></HostList>
+    <LocaleList><Locale Code="All" /></LocaleList>
+    <RequiredRuntimeList><RequiredRuntime Name="CSXS" Version="9.0" /></RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <!-- headless server: starts with AE, no UI -->
+    <Extension Id="com.vslon.aemcp.server">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./server.html</MainPath>
+          <CEFCommandLine><Parameter>--enable-nodejs</Parameter><Parameter>--mixed-context</Parameter></CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>false</AutoVisible>
+          <StartOn>
+            <Event>com.adobe.csxs.events.ApplicationActivate</Event>
+            <Event>applicationActivate</Event>
+          </StartOn>
+        </Lifecycle>
+        <UI><Type>Custom</Type><Geometry><Size><Height>1</Height><Width>1</Width></Size></Geometry></UI>
+      </DispatchInfo>
+    </Extension>
+    <!-- status panel: Window > Extensions > AE MCP Bridge (also starts the server if the headless one did not) -->
+    <Extension Id="com.vslon.aemcp.panel">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./panel.html</MainPath>
+          <CEFCommandLine><Parameter>--enable-nodejs</Parameter><Parameter>--mixed-context</Parameter></CEFCommandLine>
+        </Resources>
+        <Lifecycle><AutoVisible>true</AutoVisible></Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>AE MCP Bridge</Menu>
+          <Geometry><Size><Height>160</Height><Width>320</Width></Size><MinSize><Height>80</Height><Width>200</Width></MinSize></Geometry>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "after-effects": {
+      "command": "C:\\Python312\\python.exe",
+      "args": ["C:\\path\\to\\vslon_ae_mcp\\server\\ae_mcp_server.py"]
+    }
+  }
+}
