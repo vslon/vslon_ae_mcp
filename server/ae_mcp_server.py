@@ -12,7 +12,7 @@ Environment variables:
     AE_MCP_HOST   bridge host (default 127.0.0.1)
     AE_MCP_PORT   bridge port (default 8765)
 
-https://github.com/vs1on/vslon_ae_mcp
+https://github.com/vslon/vslon_ae_mcp
 """
 import json
 import os

@@ -8,7 +8,7 @@
 
 A small CEP bridge inside After Effects plus a zero-dependency MCP server: your assistant can read projects, edit comps, run ExtendScript and render. It does not drive the UI.
 
-[![CI](https://github.com/vs1on/vslon_ae_mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/vs1on/vslon_ae_mcp/actions/workflows/ci.yml)
+[![CI](https://github.com/vslon/vslon_ae_mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/vslon/vslon_ae_mcp/actions/workflows/ci.yml)
 ![After Effects](https://img.shields.io/badge/After%20Effects-2020%2B-9999FF?logo=adobeaftereffects&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3.9%2B-3776AB?logo=python&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-2024--11--05-black)
@@ -52,7 +52,7 @@ The MCP server wraps each request in a guarded ExtendScript function and posts i
 ### 1. Get the code
 
 ```bash
-git clone https://github.com/vs1on/vslon_ae_mcp.git
+git clone https://github.com/vslon/vslon_ae_mcp.git
 ```
 
 ### 2. Install the bridge into After Effects
@@ -186,7 +186,7 @@ To uninstall, run `scripts/uninstall.ps1` and remove the `after-effects` entry f
 
 ## License
 
-[MIT](LICENSE) © vs1on
+[MIT](LICENSE) © vslon
 
 ---
 
@@ -198,7 +198,7 @@ To uninstall, run `scripts/uninstall.ps1` and remove the `after-effects` entry f
 
 **Установка (Windows):**
 
-1. `git clone https://github.com/vs1on/vslon_ae_mcp.git`
+1. `git clone https://github.com/vslon/vslon_ae_mcp.git`
 2. `powershell -ExecutionPolicy Bypass -File scripts\install.ps1`. Скрипт скопирует расширение, разрешит неподписанные CEP-расширения и выведет готовый конфиг.
 3. Вставьте конфиг в клиент. В Claude Desktop: *Settings → Developer → Edit Config*.
 4. Перезапустите After Effects и клиент. В `Window > Extensions > AE MCP Bridge` должно быть *listening on 127.0.0.1:8765*.
